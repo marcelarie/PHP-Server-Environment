@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['mail'] ) {
+if (isset($_SESSION['mail'] )) {
     header('Location: validate.php');
 }
 ?>

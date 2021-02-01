@@ -1,14 +1,10 @@
 <link rel='stylesheet' href='css/style.css'>
-<pre>
 <?php
 session_start();
-
 
 if (isset($_POST['mail']) && isset($_POST['password'])) {
     $_SESSION['mail'] = $_POST['mail'];
     $_SESSION['password'] = $_POST['password'];
-} else {
-    header('Location: index.php');
 }
 
 if (isset($_SESSION['mail']) && isset($_SESSION['password']) ){
