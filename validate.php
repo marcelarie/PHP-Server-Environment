@@ -1,18 +1,25 @@
 <link rel='stylesheet' href='css/style.css'>
+<pre>
 <?php
 session_start();
 
-if (!isset($_SESSION['mail'])) {
+
+if (isset($_POST['mail']) && isset($_POST['password'])) {
     $_SESSION['mail'] = $_POST['mail'];
     $_SESSION['password'] = $_POST['password'];
+} else {
+    header('Location: index.php');
 }
 
 if (isset($_SESSION['mail']) && isset($_SESSION['password']) ){
+    echo 'Welcome, ';
     echo $_SESSION['mail'];
-    echo $_SESSION['password'];
+    echo "<br>";
+    // echo $_SESSION['password'];
+    // echo "<br>";
     include 'panel.php';
-    print " <form action='logout.php'>
-        <button type='submit'>Log out</button>
-    </form> ";
+}
+if (!$_SESSION['mail'] ) {
+    header('Location: index.php');
 }
 ?>

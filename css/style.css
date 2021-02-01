@@ -2,4 +2,28 @@
 body {
     background-color: black;
     color: whitesmoke;
+    text-align:center;
 }
+
+
+.form__container {
+    border: 2px solid grey;
+    padding: 2em;
+    border-radius: 5px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+button {
+    margin: 0 4em;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
