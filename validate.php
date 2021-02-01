@@ -8,14 +8,12 @@ if (isset($_POST['mail']) && isset($_POST['password'])) {
 }
 
 if (isset($_SESSION['mail']) && isset($_SESSION['password']) ){
+    echo "<div class='message'>";
     echo 'Welcome, ';
     echo $_SESSION['mail'];
-    echo "<br>";
-    // echo $_SESSION['password'];
-    // echo "<br>";
     include 'panel.php';
 }
 if (!$_SESSION['mail'] ) {
-    header('Location: index.php');
+    header('Location: logout.php');
 }
 ?>
